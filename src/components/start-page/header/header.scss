@@ -1,0 +1,53 @@
+.start-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.start-page__logo {
+  line-height: 210px;
+  width: 560px;
+
+  font-size: 150px;
+  font-family: belissimo;
+
+  color: #fff;
+  background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+}
+
+.start-page__nav {
+  width: 500px;
+  height: 80px;
+
+  margin-top: 30px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255,255,255,0.72);
+  border-radius: 20px;
+}
+
+.start-page__link {
+  background: none;
+  border: none;
+
+  font-family: baldur;
+  font-size: 40px;
+}
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
+}

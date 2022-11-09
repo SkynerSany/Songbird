@@ -1,0 +1,51 @@
+.menu {
+  height: 750px;
+  width: 100%;
+
+  margin: 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255, 255, 255, 0.72);
+  border-radius: 20px;
+}
+
+.menu__greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 120px;
+}
+
+.menu__btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+
+
+  button {
+    height: 100px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    font-family: baldur;
+    font-size: 40px;
+
+    &:active {
+      background: #ffffff;
+      box-shadow: inset 20px 20px 60px #d9d9d9,
+                  inset -20px -20px 60px #ffffff;
+    }
+  }
+
+}

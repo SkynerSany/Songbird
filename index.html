@@ -11,10 +11,15 @@
   <main>
     <article class="start-page">
       <header class="start-page__header">
-        <h1 class="start-page__logo">SongBird</h1>
+        <h1 class="logo start-page__logo">SongBird</h1>
+        <div class="start-page__menu-bar">
+          <div class="start-page__bar"></div>
+          <div class="start-page__bar"></div>
+          <div class="start-page__bar"></div>
+        </div>
         <nav class="start-page__nav">
-          <button class="start-page__link">Главная</button>
-          <button class="start-page__link">Викторина</button>
+          <button class="start-page__link start-page__link_active">Главная</button>
+          <button class="start-page__link" id="link-quiz">Викторина</button>
         </nav>
       </header>
       <section class="menu">
@@ -35,8 +40,47 @@
     </article>
     <article class="game-page">
       <header class="game-page__header">
-    
+        <div class="game-page__title">
+          <h2 class="logo game-page__logo">SongBird</h2>
+          <p class="game-page__score">Счет: <span class="game-page__score-number">50</span></p>
+        </div>
+        <ul class="game-page__progress">
+          <li class="game-page__progress-item game-page__progress-item_active">Разминка</li>
+          <li class="game-page__progress-item">Воробьиные</li>
+          <li class="game-page__progress-item">Лесные птицы</li>
+          <li class="game-page__progress-item">Певчие птицы</li>
+          <li class="game-page__progress-item">Хищные птицы</li>
+          <li class="game-page__progress-item">Морские птицы</li>
+        </ul>
       </header>
+      <section class="question">
+        <img src="./src/assets/images/unknown-bird.jpg" alt="unknown-bird" class="question__img">
+        <div class="question__info">
+          <p class="question__item-name">******</p>
+          <div class="player question__player">
+            <div class="player__container">
+              <div class="player__control-btn">
+                <svg class="player__btn-icon" viewBox="-200 0 1200 1000">
+                  <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
+                          29.7-3.64 416.71s.19 403.87 3.64 416.71c16.09 60.74 61.69 86.03 120.9 67.25 9-2.87 
+                          53.65-25.1 116.49-58.24 56.14-29.51 221.29-116.3 367.28-192.93 145.99-76.64 271.29-143.31 
+                          278.38-148.1 39.28-25.68 59.59-63.04 53.26-97.52-4.79-26.63-24.33-53.07-52.88-71.65C892 399.37 
+                          172.58 22.32 154.95 16.38c-18.97-6.33-43.3-8.24-58.44-4.41z">
+                  </path>
+                </svg>
+              </div>
+              <div class="player__bar-container">
+                <div class="player__bar"></div>
+                <div class="player__bar-circle"></div>
+                <div class="player__time-container">
+                  <div class="player__time">00 : 00</div>
+                  <div class="player__time">00 : 00</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </article>
     <article class="result-page">
     </article>
@@ -46,6 +90,6 @@
     <div class='app-bg__style'></div>
     <div class='app-bg__style'></div>
   </div>
-  <script type="modules" src="./dist/bundle.js"></script>
+  <script src="./dist/bundle.js"></script>
 </body>
 </html>

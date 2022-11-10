@@ -26,11 +26,27 @@ body {
 }
 
 main {
-  width: 90%;
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1140px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: 992px) {
+    max-width: 720px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 540px;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 90%;
+  }
 }
 
 .app-bg {
@@ -66,6 +82,19 @@ main {
     opacity: .2;
   }
 
+}
+
+.logo {
+  font-family: belissimo;
+
+  color: #fff;
+  background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
 }
 
 @keyframes hue {

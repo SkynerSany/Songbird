@@ -2,6 +2,8 @@
   width: 100%;
   margin-top: 20px;
   position: relative;
+
+  display: none;
 }
 
 .strt-page__footer {
@@ -15,12 +17,19 @@
   backdrop-filter: blur(20px);
   box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
   background-color: rgba(255,255,255,0.72);
-  border-radius: 20px;
+  border-radius: 10px;
+
+  & > * {
+    width: 140px;
+
+    @media screen and (max-width: 576px) {
+      width: 80px;
+    }
+  }
 }
 
 .strt-page__author-link {
   height: 50px;
-  width: 140px;
   background-image: url(../../assets/icons/github.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -29,12 +38,16 @@
 
 .strt-page__year {
   font-size: 48px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 40px;
+  }
 }
 
 .strt-page__course-link {
   height: 50px;
-  width: 140px;
   background-image: url(../../assets/icons/rs_school.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 }

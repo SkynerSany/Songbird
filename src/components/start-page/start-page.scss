@@ -14,11 +14,6 @@
   align-items: center;
   justify-content: space-around;
 
-  backdrop-filter: blur(20px);
-  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
-  background-color: rgba(255,255,255,0.72);
-  border-radius: 10px;
-
   & > * {
     width: 140px;
 

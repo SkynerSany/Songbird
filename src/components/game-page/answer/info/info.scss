@@ -1,0 +1,51 @@
+.answer__item-info {
+  padding: 20px;
+}
+
+.answer__instuction {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.answer__card {
+  display: none;
+  // display: grid;
+  grid-template-columns: 200px auto;
+  gap: 20px;
+}
+
+.answer__img {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.answer__info {
+  display: grid;
+  grid-template-rows: 40px 30px 85px;
+}
+
+.answer__name {
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+
+.answer__name-latins {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #1A2027;
+  font-size: 20px;
+}
+
+.answer__player {
+
+}
+
+.answer__description {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 20px;
+}

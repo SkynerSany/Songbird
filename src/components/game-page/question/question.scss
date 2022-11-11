@@ -3,16 +3,13 @@
   padding: 20px;
 
   display: flex;
-  backdrop-filter: blur(20px);
-  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
-  background-color: rgba(255,255,255,0.72);
-  border-radius: 10px;
 }
 
 .question__img {
   width: 200px;
   height: 155px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 .question__info {

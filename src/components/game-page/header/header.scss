@@ -30,10 +30,6 @@
   font-size: 40px;
 }
 
-.game-page__score-number {
-
-}
-
 .game-page__progress {
   margin-top: 10px;
 
@@ -41,11 +37,6 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-  backdrop-filter: blur(20px);
-  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
-  background-color: rgba(255,255,255,0.72);
-  border-radius: 10px;
   overflow: hidden;
 
   font-size: 25px;
@@ -58,7 +49,6 @@
   flex: auto;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 
   &_active {
     background-color: rgba(255,255,255,0.92);

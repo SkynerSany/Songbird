@@ -20,14 +20,18 @@
   }
 
   @media screen and (max-width: 576px) {
-    width: 190px;
-    line-height: 70px;
-    font-size: 50px;
+    width: 150px;
+    line-height: 55px;
+    font-size: 40px;
   }
 }
 
 .game-page__score {
   font-size: 40px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 30px;
+  }
 }
 
 .game-page__progress {

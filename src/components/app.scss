@@ -27,6 +27,7 @@ body {
 
 main {
   width: 100%;
+  margin-bottom: 20px;
   max-width: 1140px;
   display: flex;
   flex-direction: column;
@@ -101,7 +102,8 @@ main {
 .game-page__progress,
 .answer__variants-container,
 .answer__item-info,
-.next-level {
+.next-level,
+.result-page {
   backdrop-filter: blur(20px);
   box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
   background-color: rgba(255,255,255,0.72);

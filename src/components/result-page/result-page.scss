@@ -1,0 +1,62 @@
+.result-page {
+  width: 100%;
+  min-height: 300px;
+  margin-top: 20px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+  text-align: center;
+  line-height: 35px;
+
+  // display: none;
+}
+
+.result-page__confirm {
+  display: none;
+}
+
+.result-page__btns-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 130px;
+  
+  button {
+    height: 100px;
+    width: 300px;
+
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    font-family: baldur;
+    font-size: 40px;
+
+    &:active {
+      background: #ffffff;
+      box-shadow: inset 0px 0px 10px 3px #bebebe;
+    }
+  }
+}
+
+.result-page__btn-new {
+  &:not(:hover) {
+    animation: puls 0.7s linear infinite;
+  }
+}
+
+@keyframes puls {
+  25% {
+    transform: scale(0.95);
+  }
+
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+

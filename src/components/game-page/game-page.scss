@@ -1,6 +1,5 @@
 .game-page {
   width: 100%;
-  margin-top: 10px;
   position: relative;
   
   // display: none;
@@ -14,11 +13,43 @@
   font-family: baldur;
   font-size: 25px;
 
-  &:hover {
-    background-color: #ffffff;
+  &_disabled {
+    background-color: rgb(168, 168, 168);
+
+    &:disabled {
+      color: inherit;
+    }
   }
 
-  &:active {
-    box-shadow: inset 0px 0px 5px 3px #bebebe;
+  &_active {
+    &:hover {
+      background-color: #ffffff;
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 5px 3px #bebebe;
+    }
+  }
+}
+
+.access-denied {
+  animation: denied 0.5s;
+}
+
+@keyframes denied {
+  20% {
+    transform: translateX(10px);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }

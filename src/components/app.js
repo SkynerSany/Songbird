@@ -19,6 +19,10 @@ import './game/game';
 
 import { setResultPageEvents } from './result-page/result-page';
 import { setStartPageEvents } from './start-page/menu/menu';
+import { setVariantEvents } from './game-page/answer/variants/variants';
+import { setGamePageEvents } from './game-page/game-page';
 
 setStartPageEvents();
+setVariantEvents();
 setResultPageEvents();
+setGamePageEvents();

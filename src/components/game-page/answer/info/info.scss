@@ -5,11 +5,13 @@
 .answer__instuction {
   font-size: 25px;
   line-height: 30px;
-  display: none; 
+}
+
+.answer__card-info {
+  display: none;
 }
 
 .answer__card {
-  // display: none;
   display: grid;
   grid-template-columns: 200px auto;
   gap: 20px;
@@ -64,7 +66,6 @@
 }
 
 .answer__description {
-  // display: none;
   margin-top: 20px;
   font-size: 18px;
   line-height: 20px;

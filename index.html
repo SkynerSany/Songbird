@@ -24,12 +24,12 @@
       </header>
       <section class="menu">
         <div class="menu__greeting">
-          <h2 class="menu__greeting-text">Hello</h2>
-          <span class="menu__name" contenteditable>[ Your name ]</span>
+          <h2 class="menu__greeting-text">Привет</h2>
+          <span class="menu__name" contenteditable></span>
         </div>
         <div class="menu__btns-container">
-          <button class="menu__btn-score">Score</button>
-          <button class="menu__btn-start">New Game</button>
+          <button class="menu__btn-score">Энциклопедия</button>
+          <button class="menu__btn-start">Новая игра</button>
         </div>
       </section>
       <footer class="strt-page__footer">
@@ -42,7 +42,7 @@
       <header class="game-page__header">
         <div class="game-page__title">
           <h2 class="logo game-page__logo">SongBird</h2>
-          <p class="game-page__score">Счет: <span class="game-page__score-number">50</span></p>
+          <p class="game-page__score">Счет: <span class="game-page__score-number">0</span></p>
         </div>
         <ul class="game-page__progress">
           <li class="game-page__progress-item game-page__progress-item_active">Разминка</li>
@@ -59,7 +59,7 @@
           <p class="question__item-name">******</p>
           <div class="player question__player">
             <div class="player__container">
-              <audio class="question__plauer-audio" src="" hidden></audio>
+              <audio class="question__player-audio" src="" hidden></audio>
               <div class="player__control-btn">
                 <svg class="player__btn-icon" viewBox="-200 0 1200 1000">
                   <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
@@ -114,48 +114,50 @@
             <p>Послушайте плеер.</p>
             <p>Выберите птицу из списка.</p>
           </div>
-          <div class="answer__card">
-            <img src="https://live.staticflickr.com/65535/49221158846_b0b69a58f1.jpg" alt="animal" class="answer__img">
-            <div class="answer__info">
-              <p class="answer__name">Журавль</p>
-              <p class="answer__name-latins">Grus grus</p>
-              <div class="player answer__player">
-                <div class="player__container">
-                  <audio class="answer__plauer-audio" src="" hidden></audio>
-                  <div class="player__control-btn">
-                    <svg class="player__btn-icon" viewBox="-200 0 1200 1000">
-                      <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
-                              29.7-3.64 416.71s.19 403.87 3.64 416.71c16.09 60.74 61.69 86.03 120.9 67.25 9-2.87 
-                              53.65-25.1 116.49-58.24 56.14-29.51 221.29-116.3 367.28-192.93 145.99-76.64 271.29-143.31 
-                              278.38-148.1 39.28-25.68 59.59-63.04 53.26-97.52-4.79-26.63-24.33-53.07-52.88-71.65C892 399.37 
-                              172.58 22.32 154.95 16.38c-18.97-6.33-43.3-8.24-58.44-4.41z">
-                      </path>
-                    </svg>
-                  </div>
-                  <div class="player__bar-container">
-                    <div class="player__bar"></div>
-                    <div class="player__bar-circle"></div>
-                    <div class="player__time-container">
-                      <div class="player__time">00 : 00</div>
-                      <div class="player__time">00 : 00</div>
+          <div class="answer__card-info">
+            <div class="answer__card">
+              <img src="" alt="animal" class="answer__img">
+              <div class="answer__info">
+                <p class="answer__name"></p>
+                <p class="answer__name-latins"></p>
+                <div class="player answer__player">
+                  <div class="player__container">
+                    <audio class="answer__player-audio" src="" hidden></audio>
+                    <div class="player__control-btn">
+                      <svg class="player__btn-icon" viewBox="-200 0 1200 1000">
+                        <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
+                                29.7-3.64 416.71s.19 403.87 3.64 416.71c16.09 60.74 61.69 86.03 120.9 67.25 9-2.87 
+                                53.65-25.1 116.49-58.24 56.14-29.51 221.29-116.3 367.28-192.93 145.99-76.64 271.29-143.31 
+                                278.38-148.1 39.28-25.68 59.59-63.04 53.26-97.52-4.79-26.63-24.33-53.07-52.88-71.65C892 399.37 
+                                172.58 22.32 154.95 16.38c-18.97-6.33-43.3-8.24-58.44-4.41z">
+                        </path>
+                      </svg>
+                    </div>
+                    <div class="player__bar-container">
+                      <div class="player__bar"></div>
+                      <div class="player__bar-circle"></div>
+                      <div class="player__time-container">
+                        <div class="player__time">00 : 00</div>
+                        <div class="player__time">00 : 00</div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <p class="answer__description">Звуки, издаваемые журавлем, похожи на звонкое 
+                  «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», 
+                  а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».
+            </p>
           </div>
-          <p class="answer__description">Звуки, издаваемые журавлем, похожи на звонкое 
-                «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», 
-                а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».
-          </p>
         </div>
       </section>
       <button class="next-level next-level_disabled">Следующий уровень</button>
     </article>
     <article class="result-page">
       <div class="result-page__unconfirm">
-        <p class="result-page__title">Поздравляю, вы набрали <span class="result-page__score">40</span> баллов из 50.</p>
-        <p class="result-page__question">Вы хорошо постарались, но вам не хватило <span class="result-page__unscore">10</span> баллов до максимума.</p>
+        <p class="result-page__title">Поздравляю, вы набрали <span class="result-page__score"></span> баллов из 30.</p>
+        <p class="result-page__question">Вы хорошо постарались, но вам не хватило <span class="result-page__unscore"></span> баллов до максимума.</p>
         <p class="result-page__question">Сыграете еще?</p>
         <div class="result-page__btns-container">
           <button class="result-page__btn-new">Да</button>

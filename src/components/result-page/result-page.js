@@ -1,14 +1,5 @@
-import { openStartPage } from '../start-page/start-page';
-import { openGamePage } from '../game-page/game-page';
-import { game } from '../game/game';
-
-function openResultPage() {
-  document.querySelector('.result-page').style.display = 'block';
-}
-
-function closeResultPage() {
-  document.querySelector('.result-page').style.display = 'none';
-}
+import changePageState from '../game/pageState';
+import { startGame, getScore } from '../game/gameEvents';
 
 function openConfirm() {
   document.querySelector('.result-page__unconfirm').style.display = 'none';
@@ -20,15 +11,28 @@ function openUnconfirm() {
   document.querySelector('.result-page__confirm').style.display = 'none';
 }
 
+function setMessage() {
+  const score = getScore();
+
+  if (score === 30) {
+    openConfirm();
+    return;
+  }
+
+  document.querySelector('.result-page__score').textContent = score;
+  document.querySelector('.result-page__unscore').textContent = 30 - score;
+  openUnconfirm();
+}
+
 function startNewGame() {
-  game.startGame();
-  closeResultPage();
-  openGamePage();
+  startGame();
+  changePageState('resultPage', 'close');
+  changePageState('gamePage', 'open');
 }
 
 function openMenu() {
-  closeResultPage();
-  openStartPage();
+  changePageState('resultPage', 'close');
+  changePageState('startPage', 'open');
 }
 
 function setResultPageEvents() {
@@ -37,9 +41,8 @@ function setResultPageEvents() {
 }
 
 export {
-  openResultPage,
-  closeResultPage,
   openConfirm,
   openUnconfirm,
   setResultPageEvents,
+  setMessage,
 };

@@ -13,11 +13,12 @@
   text-align: center;
   line-height: 35px;
 
-  // display: none;
-}
-
-.result-page__confirm {
   display: none;
+
+  & > * {
+    width: 100%;
+    display: none;
+  }
 }
 
 .result-page__btns-container {
@@ -40,6 +41,18 @@
       background: #ffffff;
       box-shadow: inset 0px 0px 10px 3px #bebebe;
     }
+  }
+
+  @media screen and (max-width: 992px) {
+    gap: 80px;
+  }
+
+  @media screen and (max-width: 768px) {
+    gap: 50px;
+  }
+
+  @media screen and (max-width: 576px) {
+    gap: 30px;
   }
 }
 

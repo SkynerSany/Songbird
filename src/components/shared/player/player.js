@@ -1,9 +1,9 @@
-import * as playerData from './playerData';
+import * as playerData from './player.data';
 import createPlayer from './createPlayer';
 
 class Player {
-  constructor(parent, audio) {
-    this.parent = document.querySelector(`.${parent}`);
+  constructor(parent, audio, area = document) {
+    this.parent = area.querySelector(`.${parent}`);
     this.audio = new Audio(audio);
   }
 
@@ -96,8 +96,15 @@ class Player {
 
   setDefault() {
     this.playerContainer = createPlayer(playerData);
-    [this.btn, this.bar] = this.playerContainer.children;
+    [this.btn, this.bar, this.volume] = this.playerContainer.children;
     this.drag = false;
+    this.volume.value = localStorage.songBird_volume * 10;
+    this.audio.volume = localStorage.songBird_volume;
+  }
+
+  setVolume(volume) {
+    localStorage.songBird_volume = volume.value / 10;
+    this.audio.volume = localStorage.songBird_volume;
   }
 
   setEvents() {
@@ -110,11 +117,12 @@ class Player {
     this.audio.addEventListener('ended', () => this.onPause());
     this.bar.querySelector('.player__bar-circle').addEventListener('mousedown', (e) => this.getCircle(e));
     this.playerContainer.addEventListener('removeAudio', () => this.onPause());
+    this.volume.addEventListener('input', (e) => this.setVolume(e.target));
   }
 }
 
-export default function addPlayer(container, song) {
-  const playerContainer = document.querySelector(container);
-  const player = new Player(playerContainer.classList[1], song);
+export default function addPlayer(container, song, area) {
+  const playerContainer = container;
+  const player = new Player(playerContainer.classList[1], song, area);
   player.setEvents();
 }

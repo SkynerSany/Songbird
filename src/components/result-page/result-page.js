@@ -1,4 +1,4 @@
-import changePageState from '../game/pageState';
+import changePageState from '../shared/pageState';
 import { startGame, getScore } from '../game/gameEvents';
 
 function openConfirm() {

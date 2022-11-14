@@ -1,6 +1,6 @@
 import { checkComlete, changeToDefault, resetScore, getCurrentSong } from '../game/gameEvents';
 import { setDefaultQuestion } from './question/question';
-import changePageState from '../game/pageState';
+import changePageState from '../shared/pageState';
 import { setDefaultInfo } from './answer/info/info';
 import { setMessage } from '../result-page/result-page';
 import addPlayer from '../shared/player/player';
@@ -40,7 +40,7 @@ function clickNextLevel(e) {
     changeBtnStyle();
     setDefaultQuestion();
     setDefaultInfo();
-    addPlayer('.question__player', getCurrentSong());
+    addPlayer(document.querySelector('.question__player'), getCurrentSong());
     return;
   }
 

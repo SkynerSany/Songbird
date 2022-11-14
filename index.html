@@ -18,7 +18,7 @@
           <div class="start-page__bar"></div>
         </div>
         <nav class="start-page__nav">
-          <button class="start-page__link start-page__link_active">Главная</button>
+          <button class="start-page__link start-page__link_active" id="link-menu">Главная</button>
           <button class="start-page__link" id="link-quiz">Викторина</button>
         </nav>
       </header>
@@ -28,8 +28,20 @@
           <span class="menu__name" contenteditable></span>
         </div>
         <div class="menu__btns-container">
-          <button class="menu__btn-score">Энциклопедия</button>
+          <button class="menu__btn-gallery">Галлерея</button>
           <button class="menu__btn-start">Новая игра</button>
+        </div>
+      </section>
+      <section class="gallery">
+        <h2 class="gallery__title">Галлерея</h2>
+        <ul class="gallery__types-container">
+          <li class="gallery__progress-item gallery__progress-item_active">Воробьиные</li>
+          <li class="gallery__progress-item">Лесные птицы</li>
+          <li class="gallery__progress-item">Певчие птицы</li>
+          <li class="gallery__progress-item">Хищные птицы</li>
+          <li class="gallery__progress-item">Морские птицы</li>
+        </ul>
+        <div class="gallery__list">
         </div>
       </section>
       <footer class="strt-page__footer">
@@ -79,10 +91,11 @@
                 <div class="player__bar"></div>
                 <div class="player__bar-circle"></div>
                 <div class="player__time-container">
-                  <div class="player__time">00 : 00</div>
-                  <div class="player__time">00 : 00</div>
+                  <div class="player__time">00:00</div>
+                  <div class="player__time">00:00</div>
                 </div>
               </div>
+              <input type="range" min="0" max="10" step="0.5" class="player__volume">
             </div>
           </div>
         </div>
@@ -147,10 +160,11 @@
                       <div class="player__bar"></div>
                       <div class="player__bar-circle"></div>
                       <div class="player__time-container">
-                        <div class="player__time">00 : 00</div>
-                        <div class="player__time">00 : 00</div>
+                        <div class="player__time">00:00</div>
+                        <div class="player__time">00:00</div>
                       </div>
                     </div>
+                    <input type="range" min="0" max="10" step="0.5" class="player__volume">
                   </div>
                 </div>
               </div>

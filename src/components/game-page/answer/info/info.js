@@ -16,7 +16,7 @@ function setItemInfo(data) {
   document.querySelector('.answer__name-latins').textContent = data.species;
   document.querySelector('.answer__description').textContent = data.description;
 
-  addPlayer('.answer__player', data.audio);
+  addPlayer(document.querySelector('.answer__player'), data.audio);
   openInfo();
 }
 

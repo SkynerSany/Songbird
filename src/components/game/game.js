@@ -1,4 +1,4 @@
-import birdsData from './birdsData';
+import birdsData from '../shared/birdsData';
 
 class Game {
   setCurentAnimal() {

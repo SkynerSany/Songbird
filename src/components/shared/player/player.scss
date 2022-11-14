@@ -8,7 +8,7 @@
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 40px auto;
+  grid-template-columns: 40px auto 10px;
   gap: 20px;
 }
 
@@ -82,4 +82,10 @@
   color: #1A2027;
   display: flex;
   justify-content: space-between;
+}
+
+.player__volume {
+  height: 50px;
+  -webkit-appearance: slider-vertical;
+  cursor: pointer;
 }

@@ -93,7 +93,7 @@ function startGame() {
   changeToDefault();
   game.setCurrentSong();
   game.setVariants();
-  addPlayer('.question__player', game.currentSong);
+  addPlayer(document.querySelector('.question__player'), game.currentSong);
 }
 
 export {

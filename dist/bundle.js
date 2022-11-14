@@ -1243,8 +1243,8 @@ class Player {
     this.playerContainer = (0,_createPlayer__WEBPACK_IMPORTED_MODULE_1__["default"])(_player_data__WEBPACK_IMPORTED_MODULE_0__);
     [this.btn, this.bar, this.volume] = this.playerContainer.children;
     this.drag = false;
-    this.volume.value = localStorage.songBird_volume * 10;
-    this.audio.volume = localStorage.songBird_volume;
+    this.volume.value = localStorage.songBird_volume ? localStorage.songBird_volume * 10 : 10;
+    this.audio.volume = localStorage.songBird_volume ? localStorage.songBird_volume : 1;
   }
 
   setVolume(volume) {

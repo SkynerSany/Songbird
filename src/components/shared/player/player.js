@@ -98,8 +98,8 @@ class Player {
     this.playerContainer = createPlayer(playerData);
     [this.btn, this.bar, this.volume] = this.playerContainer.children;
     this.drag = false;
-    this.volume.value = localStorage.songBird_volume * 10;
-    this.audio.volume = localStorage.songBird_volume;
+    this.volume.value = localStorage.songBird_volume ? localStorage.songBird_volume * 10 : 10;
+    this.audio.volume = localStorage.songBird_volume ? localStorage.songBird_volume : 1;
   }
 
   setVolume(volume) {

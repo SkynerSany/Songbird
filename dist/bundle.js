@@ -1469,9 +1469,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function clickBurgerMenu() {
+  const burgerMenu = document.querySelector('.start-page__menu-bar');
+  burgerMenu.classList.toggle('start-page__menu-bar_active');
+  const menu = document.querySelector('.start-page__nav');
+  menu.style.transform = burgerMenu.classList.contains('start-page__menu-bar_active') ? 'translateX(0vw)' : 'translateX(100vw)';
+}
+
 function setStartPageHeaderEvents() {
-  document.querySelector('#link-quiz').addEventListener('click', _menu_menu__WEBPACK_IMPORTED_MODULE_1__.startNewGame);
+  document.querySelector('.start-page__menu-bar').addEventListener('click', clickBurgerMenu);
+  document.querySelector('#link-quiz').addEventListener('click', () => {
+    if (document.documentElement.scrollWidth < 577) {
+      clickBurgerMenu();
+    }
+
+    (0,_menu_menu__WEBPACK_IMPORTED_MODULE_1__.startNewGame)();
+  });
   document.querySelector('#link-menu').addEventListener('click', (e) => {
+    if (document.documentElement.scrollWidth < 577) {
+      clickBurgerMenu();
+    }
     e.target.classList.toggle('start-page__link_active');
     (0,_shared_pageState__WEBPACK_IMPORTED_MODULE_0__["default"])('menu', 'open');
     (0,_shared_pageState__WEBPACK_IMPORTED_MODULE_0__["default"])('gallery', 'close');

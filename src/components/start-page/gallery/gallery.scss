@@ -48,7 +48,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  align-items: center;
   gap: 40px;
   box-sizing: border-box;
 
@@ -58,7 +57,10 @@
 }
 
 .gallary__card {
-  width: 85%;
+  width: 80%;
+  box-shadow: 0 0 20px black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .gallary__title {

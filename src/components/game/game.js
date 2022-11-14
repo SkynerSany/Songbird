@@ -6,7 +6,7 @@ class Game {
   }
 
   setCurrentSong() {
-    document.querySelector('.question__player-audio').src = this.currentSectionData[this.currentAnimal].audio;
+    this.currentSong = this.currentSectionData[this.currentAnimal].audio;
   }
 
   setVariants() {

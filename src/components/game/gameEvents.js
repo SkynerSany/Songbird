@@ -1,7 +1,7 @@
 import { game } from './game';
 import { changeQuestion } from '../game-page/question/question';
 import { setItemInfo } from '../game-page/answer/info/info';
-import Player from '../shared/player/player';
+import addPlayer from '../shared/player/player';
 
 function setScore() {
   document.querySelector('.game-page__score-number').textContent = game.score;
@@ -19,6 +19,10 @@ function updateScore() {
 
 function getScore() {
   return game.score;
+}
+
+function getCurrentSong() {
+  return game.currentSong;
 }
 
 function checkComlete() {
@@ -82,15 +86,6 @@ function changeToDefault() {
   game.levelComplite = false;
 }
 
-function createPlayers() {
-  const players = document.querySelectorAll('.player');
-
-  players.forEach((item) => {
-    const player = new Player(item.classList[1]);
-    player.setEvents();
-  });
-}
-
 function startGame() {
   game.setDefault();
   game.setCurentAnimal();
@@ -98,7 +93,7 @@ function startGame() {
   changeToDefault();
   game.setCurrentSong();
   game.setVariants();
-  createPlayers();
+  addPlayer('.question__player', game.currentSong);
 }
 
 export {
@@ -109,4 +104,5 @@ export {
   setInfo,
   getScore,
   resetScore,
+  getCurrentSong,
 };

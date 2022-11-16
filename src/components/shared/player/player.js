@@ -104,6 +104,14 @@ class Player {
 
   setVolume(volume) {
     localStorage.songBird_volume = volume.value / 10;
+
+    document.querySelectorAll('.player__volume').forEach((volumeControl) => {
+      volumeControl.value = localStorage.songBird_volume * 10;
+      volumeControl.dispatchEvent(new Event('change'));
+    });
+  }
+
+  changeVolume() {
     this.audio.volume = localStorage.songBird_volume;
   }
 
@@ -112,12 +120,13 @@ class Player {
     this.changePlayers();
 
     this.btn.addEventListener('click', () => this.clickPlay());
-    this.audio.addEventListener('canplaythrough', this.setData.bind(this));
+    this.bar.querySelector('.player__bar-circle').addEventListener('mousedown', (e) => this.getCircle(e));
+    this.audio.addEventListener('canplaythrough', () => this.setData());
     this.audio.addEventListener('timeupdate', () => this.updateProgress());
     this.audio.addEventListener('ended', () => this.onPause());
-    this.bar.querySelector('.player__bar-circle').addEventListener('mousedown', (e) => this.getCircle(e));
-    this.playerContainer.addEventListener('removeAudio', () => this.onPause());
     this.volume.addEventListener('input', (e) => this.setVolume(e.target));
+    this.volume.addEventListener('change', () => this.changeVolume());
+    this.playerContainer.addEventListener('removeAudio', () => this.onPause());
   }
 }
 

@@ -1,0 +1,96 @@
+export default {
+  ru: {
+    'start-page__link': [
+      'Главная',
+      'Викторина',
+    ],
+    'translator-btn': 'ru',
+    'menu__greeting-text': 'Привет',
+    'menu__btn-gallery': 'Галлерея',
+    'menu__btn-start': 'Новая игра',
+    'gallery__progress-item': [
+      'Воробьиные',
+      'Лесные птицы',
+      'Певчие птицы',
+      'Хищные птицы',
+      'Морские птицы',
+    ],
+    'game-page__score-name': 'Счет:',
+    'game-page__progress-item': [
+      'Разминка',
+      'Воробьиные',
+      'Лесные птицы',
+      'Певчие птицы',
+      'Хищные птицы',
+      'Морские птицы',
+    ],
+    'answer__instuction-text': [
+      'Послушайте плеер.',
+      'Выберите птицу из списка.',
+    ],
+    'next-level': 'Следующий уровень',
+    'result-page__text': [
+      'Поздравляю, вы набрали',
+      'баллов из 30.',
+      'Вы хорошо постарались, но вам не хватило',
+      'баллов до максимума.',
+      'Сыграете еще?',
+      'Поздравляю, вы набрали максимальное колличество баллов.',
+    ],
+    'result-page__btn-new': [
+      'Да',
+      'Новая игра',
+    ],
+    'result-page__btn-menu': [
+      'Нет',
+      'Меню',
+    ],
+  },
+  en: {
+    'start-page__link': [
+      'Home',
+      'Quiz',
+    ],
+    'translator-btn': 'en',
+    'menu__greeting-text': 'Hello',
+    'menu__btn-gallery': 'Gallery',
+    'menu__btn-start': 'New game',
+    'gallery__progress-item': [
+      'Passerines',
+      'Forest birds',
+      'Songbirds',
+      'Predator birds',
+      'Sea birds',
+    ],
+    'game-page__score-name': 'Score:',
+    'game-page__progress-item': [
+      'Warm up',
+      'Passerines',
+      'Forest birds',
+      'Songbirds',
+      'Predator birds',
+      'Sea birds',
+    ],
+    'answer__instuction-text': [
+      'Listen to the player.',
+      'Select a bird from the list.',
+    ],
+    'next-level': 'Next level',
+    'result-page__text': [
+      'Congratulations, you have scored',
+      'points out of 30.',
+      "You did a good job, but you weren't enough",
+      'points to the maximum.',
+      'Will you play again?',
+      'Congratulations, you have scored the maximum number of points.',
+    ],
+    'result-page__btn-new': [
+      'Yes',
+      'New game',
+    ],
+    'result-page__btn-menu': [
+      'No',
+      'Menu',
+    ],
+  },
+};

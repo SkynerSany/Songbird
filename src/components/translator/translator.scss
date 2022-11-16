@@ -1,0 +1,41 @@
+.translator-btn {
+  padding: 7px;
+  margin-left: 15px;
+
+  background: none;
+  border: none;
+  font-family: baldur;
+  font-size: 32px;
+
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255,255,255,0.72);
+  border-radius: 10px;
+  text-transform: uppercase;
+
+  &:active {
+    background-color: rgba(255,255,255,0.92);
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 9px;
+    font-size: 27px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 50px;
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    margin-left: 0;
+    font-size: 32px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.92);
+    }
+  }
+}

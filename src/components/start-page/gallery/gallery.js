@@ -3,7 +3,7 @@ import addPlayer from '../../shared/player/player';
 import birdsData from '../../shared/birdsData';
 
 function setGallery(id = 0) {
-  birdsData[id + 1].forEach((bird) => {
+  birdsData[localStorage.songBird_lang][id + 1].forEach((bird) => {
     const card = createGallery();
     card.querySelector('.gallary__card-img').src = bird.image;
     card.querySelector('.gallary__card-img').alt = bird.name;

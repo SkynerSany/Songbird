@@ -147,7 +147,6 @@ main {
   animation: textclip 4s linear infinite;
 }
 
-.start-page__nav,
 .menu,
 .strt-page__footer,
 .question,
@@ -254,6 +253,11 @@ main {
     width: 50%;
   }
 }
+@media screen and (max-width: 768px) {
+  .start-page__nav {
+    height: 40px;
+  }
+}
 @media screen and (max-width: 576px) {
   .start-page__nav {
     width: 65%;
@@ -269,6 +273,7 @@ main {
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
     transition: all 0.3s linear;
     transform: translateX(100vw);
   }
@@ -281,18 +286,43 @@ main {
   border: none;
   font-family: baldur;
   font-size: 32px;
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
 }
 .start-page__link_active, .start-page__link:hover {
   background-color: rgba(255, 255, 255, 0.92);
 }
+.start-page__link:nth-child(1) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.start-page__link:nth-child(2) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+@media screen and (max-width: 992px) {
+  .start-page__link {
+    font-size: 27px;
+  }
+}
 @media screen and (max-width: 768px) {
   .start-page__link {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 576px) {
   .start-page__link {
     font-size: 32px;
+  }
+  .start-page__link:nth-child(1) {
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .start-page__link:nth-child(2) {
+    border-radius: 0;
   }
 }
 
@@ -530,6 +560,49 @@ main {
   align-items: center;
   border-top: 1px solid #1A2027;
   font-size: 20px;
+}
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/translator/translator.scss ***!
+  \************************************************************************************************************************************/
+.translator-btn {
+  padding: 7px;
+  margin-left: 15px;
+  background: none;
+  border: none;
+  font-family: baldur;
+  font-size: 32px;
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255, 255, 255, 0.72);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.translator-btn:active {
+  background-color: rgba(255, 255, 255, 0.92);
+}
+@media screen and (max-width: 992px) {
+  .translator-btn {
+    padding: 9px;
+    font-size: 27px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .translator-btn {
+    width: 50px;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .translator-btn {
+    width: 100%;
+    margin-left: 0;
+    font-size: 32px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .translator-btn:hover {
+    background-color: rgba(255, 255, 255, 0.92);
+  }
 }
 /*!**********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/components/game-page/game-page.scss ***!

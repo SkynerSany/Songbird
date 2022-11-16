@@ -20,7 +20,7 @@ class Game {
   setNextLevel() {
     this.curentLevel += 1;
     this.setCurentAnimal();
-    this.currentSectionData = birdsData[this.curentLevel];
+    this.currentSectionData = birdsData[localStorage.songBird_lang][this.curentLevel];
 
     this.setCurrentSong();
     this.setVariants();
@@ -31,8 +31,8 @@ class Game {
     this.curentLevel = 0;
     this.currentAnimal = 0;
     this.maxLevelScore = 5;
-    this.data = birdsData;
-    this.currentSectionData = birdsData[this.curentLevel];
+    this.data = birdsData[localStorage.songBird_lang];
+    this.currentSectionData = birdsData[localStorage.songBird_lang][this.curentLevel];
     this.levelComplite = false;
   }
 }

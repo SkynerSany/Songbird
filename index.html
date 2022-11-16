@@ -18,28 +18,29 @@
           <div class="start-page__bar"></div>
         </div>
         <nav class="start-page__nav">
-          <button class="start-page__link start-page__link_active" id="link-menu">Главная</button>
-          <button class="start-page__link" id="link-quiz">Викторина</button>
+          <button class="start-page__link start-page__link_active" id="link-menu"></button>
+          <button class="start-page__link" id="link-quiz"></button>
+          <button class="translator-btn" data-lang=""></button>
         </nav>
       </header>
       <section class="menu">
         <div class="menu__greeting">
-          <h2 class="menu__greeting-text">Привет</h2>
+          <h2 class="menu__greeting-text"></h2>
           <span class="menu__name" contenteditable></span>
         </div>
         <div class="menu__btns-container">
-          <button class="menu__btn-gallery">Галлерея</button>
-          <button class="menu__btn-start">Новая игра</button>
+          <button class="menu__btn-gallery"></button>
+          <button class="menu__btn-start"></button>
         </div>
       </section>
       <section class="gallery">
-        <h2 class="gallery__title">Галлерея</h2>
+        <h2 class="gallery__title"></h2>
         <ul class="gallery__types-container">
-          <li class="gallery__progress-item gallery__progress-item_active">Воробьиные</li>
-          <li class="gallery__progress-item">Лесные птицы</li>
-          <li class="gallery__progress-item">Певчие птицы</li>
-          <li class="gallery__progress-item">Хищные птицы</li>
-          <li class="gallery__progress-item">Морские птицы</li>
+          <li class="gallery__progress-item gallery__progress-item_active"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
+          <li class="gallery__progress-item"></li>
         </ul>
         <div class="gallery__list">
         </div>
@@ -54,15 +55,15 @@
       <header class="game-page__header">
         <div class="game-page__title">
           <h2 class="logo game-page__logo">SongBird</h2>
-          <p class="game-page__score">Счет: <span class="game-page__score-number">0</span></p>
+          <p class="game-page__score"><span class="game-page__score-name"></span> <span class="game-page__score-number"></span></p>
         </div>
         <ul class="game-page__progress">
-          <li class="game-page__progress-item game-page__progress-item_active">Разминка</li>
-          <li class="game-page__progress-item">Воробьиные</li>
-          <li class="game-page__progress-item">Лесные птицы</li>
-          <li class="game-page__progress-item">Певчие птицы</li>
-          <li class="game-page__progress-item">Хищные птицы</li>
-          <li class="game-page__progress-item">Морские птицы</li>
+          <li class="game-page__progress-item game-page__progress-item_active"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
+          <li class="game-page__progress-item"></li>
         </ul>
       </header>
       <section class="question">
@@ -70,33 +71,7 @@
         <div class="question__info">
           <p class="question__item-name">******</p>
           <div class="player question__player">
-            <div class="player__container">
-              <div class="player__control-btn">
-                <svg class="player__btn-icon play-icon" viewBox="-200 0 1200 1000">
-                  <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
-                          29.7-3.64 416.71s.19 403.87 3.64 416.71c16.09 60.74 61.69 86.03 120.9 67.25 9-2.87 
-                          53.65-25.1 116.49-58.24 56.14-29.51 221.29-116.3 367.28-192.93 145.99-76.64 271.29-143.31 
-                          278.38-148.1 39.28-25.68 59.59-63.04 53.26-97.52-4.79-26.63-24.33-53.07-52.88-71.65C892 399.37 
-                          172.58 22.32 154.95 16.38c-18.97-6.33-43.3-8.24-58.44-4.41z">
-                  </path>
-                </svg>
-                <svg class="player__btn-icon pause-icon" viewBox="0 0 47.607 47.607">
-                  <path fill="#00bc8c" d="M17.991 40.976a6.631 6.631 0 01-13.262 0V6.631a6.631 
-                          6.631 0 0113.262 0v34.345zM42.877 40.976a6.631 6.631 0 01-13.262 0V6.631a6.631 6.631 
-                          0 0113.262 0v34.345z">
-                  </path>
-                </svg>
-              </div>
-              <div class="player__bar-container">
-                <div class="player__bar"></div>
-                <div class="player__bar-circle"></div>
-                <div class="player__time-container">
-                  <div class="player__time">00:00</div>
-                  <div class="player__time">00:00</div>
-                </div>
-              </div>
-              <input type="range" min="0" max="10" step="0.5" class="player__volume">
-            </div>
+            <div class="player__container"></div>
           </div>
         </div>
       </section>
@@ -129,8 +104,8 @@
         </ul>
         <div class="answer__item-info">
           <div class="answer__instuction">
-            <p>Послушайте плеер.</p>
-            <p>Выберите птицу из списка.</p>
+            <p class="answer__instuction-text"></p>
+            <p class="answer__instuction-text"></p>
           </div>
           <div class="answer__card-info">
             <div class="answer__card">
@@ -139,57 +114,40 @@
                 <p class="answer__name"></p>
                 <p class="answer__name-latins"></p>
                 <div class="player answer__player">
-                  <div class="player__container">
-                    <div class="player__control-btn">
-                      <svg class="player__btn-icon" viewBox="-200 0 1200 1000">
-                        <path fill="#00bc8c" d="M96.51 11.97c-31.23 8.05-53.26 32.76-63.42 71.27-3.45 12.84-3.64 
-                                29.7-3.64 416.71s.19 403.87 3.64 416.71c16.09 60.74 61.69 86.03 120.9 67.25 9-2.87 
-                                53.65-25.1 116.49-58.24 56.14-29.51 221.29-116.3 367.28-192.93 145.99-76.64 271.29-143.31 
-                                278.38-148.1 39.28-25.68 59.59-63.04 53.26-97.52-4.79-26.63-24.33-53.07-52.88-71.65C892 399.37 
-                                172.58 22.32 154.95 16.38c-18.97-6.33-43.3-8.24-58.44-4.41z">
-                        </path>
-                      </svg>
-                      <svg class="player__btn-icon pause-icon" viewBox="0 0 47.607 47.607">
-                        <path fill="#00bc8c" d="M17.991 40.976a6.631 6.631 0 01-13.262 0V6.631a6.631 
-                                6.631 0 0113.262 0v34.345zM42.877 40.976a6.631 6.631 0 01-13.262 0V6.631a6.631 6.631 
-                                0 0113.262 0v34.345z">
-                        </path>
-                      </svg>
-                    </div>
-                    <div class="player__bar-container">
-                      <div class="player__bar"></div>
-                      <div class="player__bar-circle"></div>
-                      <div class="player__time-container">
-                        <div class="player__time">00:00</div>
-                        <div class="player__time">00:00</div>
-                      </div>
-                    </div>
-                    <input type="range" min="0" max="10" step="0.5" class="player__volume">
-                  </div>
+                  <div class="player__container"></div>
                 </div>
               </div>
             </div>
-            <p class="answer__description">Звуки, издаваемые журавлем, похожи на звонкое 
-                  «кур-лы – кур-лы». Журавли чаще всего поют дуэтом – одна птица начинает запев со слога «кур», 
-                  а вторая подхватывает «лы». Если птица поёт одна, то она издает только звук «кур».
-            </p>
+            <p class="answer__description"></p>
           </div>
         </div>
       </section>
-      <button class="next-level next-level_disabled">Следующий уровень</button>
+      <button class="next-level next-level_disabled"></button>
     </article>
     <article class="result-page">
       <div class="result-page__unconfirm">
-        <p class="result-page__title">Поздравляю, вы набрали <span class="result-page__score"></span> баллов из 30.</p>
-        <p class="result-page__question">Вы хорошо постарались, но вам не хватило <span class="result-page__unscore"></span> баллов до максимума.</p>
-        <p class="result-page__question">Сыграете еще?</p>
+        <p class="result-page__title">
+          <span class="result-page__text"></span> 
+          <span class="result-page__score"></span> 
+          <span class="result-page__text"></span>
+        </p>
+        <p class="result-page__question">
+          <span class="result-page__text"></span> 
+          <span class="result-page__unscore"> </span>
+          <span class="result-page__text"></span>
+        </p>
+        <p class="result-page__question">
+          <span class="result-page__text"></span>
+        </p>
         <div class="result-page__btns-container">
-          <button class="result-page__btn-new">Да</button>
-          <button class="result-page__btn-menu">Нет</button>
+          <button class="result-page__btn-new"></button>
+          <button class="result-page__btn-menu"></button>
         </div>
       </div>
       <div class="result-page__confirm">
-        <p class="result-page__title">Поздравляю, вы набрали максимальное колличество баллов.</p>
+        <p class="result-page__title">
+          <span class="result-page__text">Поздравляю, вы набрали максимальное колличество баллов.</span>
+        </p>
         <div class="result-page__btns-container">
           <button class="result-page__btn-new">Новая игра</button>
           <button class="result-page__btn-menu">Меню</button>

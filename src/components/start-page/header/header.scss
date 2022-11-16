@@ -37,6 +37,10 @@
     width: 50%;
   }
 
+  @media screen and (max-width: 768px) {
+    height: 40px;
+  }
+
   @media screen and (max-width: 576px) {
     width: 65%;
     height: 300px;
@@ -53,6 +57,7 @@
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 0px 0px 10px #000000;
+    border-radius: 10px;
 
     transition: all 0.3s linear;
     transform: translateX(100vw);
@@ -69,17 +74,46 @@
   font-family: baldur;
   font-size: 32px;
 
+  backdrop-filter: blur(20px);
+  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
+  background-color: rgba(255,255,255,0.72);
+  border-radius: 10px;
+
   &_active,
   &:hover {
     background-color: rgba(255,255,255,0.92);
   }
 
+  &:nth-child(1) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  
+  &:nth-child(2) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media screen and (max-width: 992px) {
+    font-size: 27px;
+  }
+
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   @media screen and (max-width: 576px) {
     font-size: 32px;
+
+    &:nth-child(1) {
+      border-radius: 10px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    &:nth-child(2) {
+      border-radius: 0;
+    }
   }
 }
 

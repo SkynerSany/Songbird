@@ -11,6 +11,7 @@ function clickBurgerMenu() {
 export default function setStartPageHeaderEvents() {
   document.querySelector('.start-page__menu-bar').addEventListener('click', clickBurgerMenu);
   document.querySelector('#link-quiz').addEventListener('click', () => {
+    document.querySelector('.translator-btn').style.display = 'block';
     if (document.documentElement.scrollWidth < 577) {
       clickBurgerMenu();
     }
@@ -18,6 +19,7 @@ export default function setStartPageHeaderEvents() {
     startNewGame();
   });
   document.querySelector('#link-menu').addEventListener('click', (e) => {
+    document.querySelector('.translator-btn').style.display = 'block';
     if (document.documentElement.scrollWidth < 577) {
       clickBurgerMenu();
     }

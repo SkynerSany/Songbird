@@ -26,12 +26,14 @@ function getCurrentSong() {
 }
 
 function checkComlete() {
+  const currentLang = localStorage.songBird_lang;
+
   if (game.curentLevel === game.data.length - 2) {
-    document.querySelector('.next-level').textContent = 'Финишь';
+    document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Финишь' : 'Finish';
   }
 
   if (game.curentLevel === game.data.length - 1) {
-    document.querySelector('.next-level').textContent = 'Следующий уровень';
+    document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Следующий уровень' : 'Next Level';
     return 'finish';
   }
 
@@ -93,6 +95,7 @@ function startGame() {
   changeToDefault();
   game.setCurrentSong();
   game.setVariants();
+  setScore();
   addPlayer(document.querySelector('.question__player'), game.currentSong);
 }
 

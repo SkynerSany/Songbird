@@ -18,12 +18,14 @@ function saveName(name) {
 }
 
 function setName() {
-  document.querySelector('.menu__name').textContent = localStorage.songBird_name || '[ваше имя]';
+  document.querySelector('.menu__name').textContent = localStorage.songBird_name
+    || localStorage.songBird_lang === 'ru' ? '[ваше имя]' : '[Your name]';
 }
 
 function checkName(e) {
   if (e.target.textContent === '') {
-    e.target.textContent = localStorage.songBird_name || '[ваше имя]';
+    e.target.textContent = localStorage.songBird_name
+      || localStorage.songBird_lang === 'ru' ? '[ваше имя]' : '[Your name]';
     return;
   }
 
@@ -32,6 +34,7 @@ function checkName(e) {
 
 function openGallery() {
   document.querySelector('#link-menu').classList.toggle('start-page__link_active');
+  document.querySelector('.translator-btn').style.display = 'none';
   changePageState('menu', 'close');
   changePageState('gallery', 'open');
   setGallery();

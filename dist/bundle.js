@@ -306,6 +306,9 @@ function changeBtnStyle() {
 
 function clickNextLevel(e) {
   const state = (0,_game_gameEvents__WEBPACK_IMPORTED_MODULE_0__.checkComlete)();
+  document.querySelectorAll('.player__container').forEach((item) => {
+    item.dispatchEvent(new CustomEvent('removeAudio'));
+  });
 
   if (state === 'finish') {
     (0,_shared_pageState__WEBPACK_IMPORTED_MODULE_2__["default"])('gamePage', 'close');

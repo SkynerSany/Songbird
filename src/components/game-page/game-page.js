@@ -23,6 +23,9 @@ function changeBtnStyle() {
 
 function clickNextLevel(e) {
   const state = checkComlete();
+  document.querySelectorAll('.player__container').forEach((item) => {
+    item.dispatchEvent(new CustomEvent('removeAudio'));
+  });
 
   if (state === 'finish') {
     changePageState('gamePage', 'close');

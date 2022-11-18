@@ -5,28 +5,28 @@
 }
 
 .start-page__logo {
-  width: 340px;
   line-height: 120px;
-  font-size: 90px;
+  font-size: 70px;
+
+  @media screen and (max-width: 992px) {
+    line-height: 100px;
+    font-size: 60px;
+  }
 
   @media screen and (max-width: 768px) {
-    width: 260px;
     line-height: 100px;
-    font-size: 70px;
+    font-size: 45px;
   }
 
   @media screen and (max-width: 576px) {
-    width: 190px;
     line-height: 70px;
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
 .start-page__nav {
   width: 40%;
   height: 50px;
-
-  margin-top: 15px;
 
   display: flex;
   align-items: center;
@@ -52,15 +52,14 @@
     left: 0;
     z-index: 9;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 0px 0px 10px #000000;
     border-radius: 10px;
 
-    transition: all 0.3s linear;
-    transform: translateX(100vw);
+    animation: show 0.2s linear;
   }
 }
 
@@ -75,13 +74,14 @@
   font-size: 32px;
 
   backdrop-filter: blur(20px);
-  box-shadow: inset 0px -1px 1px var(--muidocs-palette-grey-100);
   background-color: rgba(255,255,255,0.72);
   border-radius: 10px;
+  transition: all 0.2s linear;
 
   &_active,
   &:hover {
-    background-color: rgba(255,255,255,0.92);
+    background-color: #00bc8c;
+    color: #ffffff;
   }
 
   &:nth-child(1) {
@@ -141,7 +141,7 @@
   width: 45px;
   height: 30px;
 
-  margin: 30px 20px 10px;
+  margin: 24px 20px 10px;
   z-index: 10;
 
   display: none;

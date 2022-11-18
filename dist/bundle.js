@@ -241,6 +241,7 @@ function chooseVariant(e) {
 
   if ((0,_game_gameEvents__WEBPACK_IMPORTED_MODULE_0__.checkTroothVariant)(currentItemId)) {
     target.firstElementChild.classList.toggle('answer__check_accept');
+    document.querySelector('.question__player').firstElementChild.dispatchEvent(new CustomEvent('removeAudio'));
     (0,_game_page__WEBPACK_IMPORTED_MODULE_1__.changeBtnStyle)();
     playTrue();
     blockBtns();
@@ -1804,7 +1805,7 @@ function clickBurgerMenu() {
   const burgerMenu = document.querySelector('.start-page__menu-bar');
   burgerMenu.classList.toggle('start-page__menu-bar_active');
   const menu = document.querySelector('.start-page__nav');
-  menu.style.transform = burgerMenu.classList.contains('start-page__menu-bar_active') ? 'translateX(0vw)' : 'translateX(100vw)';
+  menu.style.display = burgerMenu.classList.contains('start-page__menu-bar_active') ? 'flex' : 'none';
 }
 
 function setStartPageHeaderEvents() {

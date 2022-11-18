@@ -17,6 +17,12 @@
     background-color: rgba(255,255,255,0.92);
   }
 
+  &:hover {
+    background-color: #007bffeb;
+    color: #ffffff;
+    box-shadow: inset 0px 0px 10px 3px #007bffeb;
+  }
+
   @media screen and (max-width: 992px) {
     padding: 9px;
     font-size: 27px;
@@ -33,9 +39,5 @@
     font-size: 32px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-
-    &:hover {
-      background-color: rgba(255,255,255,0.92);
-    }
   }
 }

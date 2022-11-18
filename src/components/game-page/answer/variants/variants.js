@@ -30,6 +30,7 @@ function chooseVariant(e) {
 
   if (checkTroothVariant(currentItemId)) {
     target.firstElementChild.classList.toggle('answer__check_accept');
+    document.querySelector('.question__player').firstElementChild.dispatchEvent(new CustomEvent('removeAudio'));
     changeBtnStyle();
     playTrue();
     blockBtns();

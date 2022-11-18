@@ -19,7 +19,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   overflow: hidden;
-
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   font-size: 25px;
 }
 
@@ -30,11 +30,13 @@
   flex: auto;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s linear;
   cursor: pointer;
 
   &_active, 
   &:hover {
-    background-color: rgba(255,255,255,0.92);
+    background-color: #00bc8c;
+    color: #ffffff;
   }
 }
 
@@ -58,9 +60,10 @@
 
 .gallary__card {
   width: 80%;
-  box-shadow: 0 0 20px black;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  animation: show 0.6s linear;
 }
 
 .gallary__title {
@@ -93,13 +96,14 @@
 
 .gallary__title-info {
   display: grid;
-  grid-template-rows: 40px 30px 85px;
+  gap: 10px;
 }
 
 .gallary__name {
   display: flex;
   align-items: center;
   font-size: 30px;
+  color: #00bc8c;
 }
 
 .gallary__name-latins {
@@ -108,4 +112,3 @@
   border-top: 1px solid #1A2027;
   font-size: 20px;
 }
-

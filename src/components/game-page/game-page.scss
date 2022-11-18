@@ -1,6 +1,7 @@
 .game-page {
   width: 100%;
   position: relative;
+  animation: show 0.6s linear;
   
   display: none;
 }
@@ -16,20 +17,17 @@
 }
 
 .game-page__logo {
-  width: 260px;
   line-height: 100px;
   font-size: 70px;
 
   @media screen and (max-width: 768px) {
-    width: 260px;
     line-height: 100px;
-    font-size: 70px;
+    font-size: 60px;
   }
 
   @media screen and (max-width: 576px) {
-    width: 150px;
     line-height: 55px;
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
@@ -62,7 +60,8 @@
   justify-content: center;
 
   &_active {
-    background-color: rgba(255,255,255,0.92);
+    background-color: #00bc8c;
+    color: #ffffff;
   }
 }
 
@@ -86,9 +85,9 @@
   border: none;
   font-family: baldur;
   font-size: 25px;
-
+  
   &_disabled {
-    background-color: rgb(168, 168, 168);
+    background: rgb(168, 168, 168);
 
     &:disabled {
       color: inherit;
@@ -96,12 +95,20 @@
   }
 
   &_active {
+    box-shadow: 0px 0px 10px 3px #00bc8c;
+    color: #00bc8c;
+    transition: all 0.2s linear;
+
     &:hover {
-      background-color: #ffffff;
+      background: #00bc8c;
+      box-shadow: none;
+      color: #ffffff;
     }
 
     &:active {
-      box-shadow: inset 0px 0px 5px 3px #bebebe;
+      background: #ffffff;
+      color: #00bc8c;
+      box-shadow: inset 0px 0px 10px 3px #00bc8c;
     }
   }
 }

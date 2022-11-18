@@ -5,7 +5,7 @@ function clickBurgerMenu() {
   const burgerMenu = document.querySelector('.start-page__menu-bar');
   burgerMenu.classList.toggle('start-page__menu-bar_active');
   const menu = document.querySelector('.start-page__nav');
-  menu.style.transform = burgerMenu.classList.contains('start-page__menu-bar_active') ? 'translateX(0vw)' : 'translateX(100vw)';
+  menu.style.display = burgerMenu.classList.contains('start-page__menu-bar_active') ? 'flex' : 'none';
 }
 
 export default function setStartPageHeaderEvents() {

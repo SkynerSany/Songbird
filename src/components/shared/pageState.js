@@ -7,7 +7,7 @@ const pageNames = {
 
   resultPage: {
     class: '.result-page',
-    open: 'block',
+    open: 'flex',
     close: 'none',
   },
 

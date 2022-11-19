@@ -721,7 +721,7 @@ main {
 @media screen and (max-width: 768px) {
   .answer {
     grid-template-columns: auto;
-    grid-template-rows: 290px auto;
+    grid-template-rows: auto auto;
   }
 }
 
@@ -927,9 +927,11 @@ main {
 }
 .answer__variant:has(.answer__check_denied) {
   color: #ff0000;
+  box-shadow: 0 0 0 1px #ff0000;
 }
 .answer__variant:has(.answer__check_accept) {
   color: #00bc8c;
+  box-shadow: 0 0 0 1px #00bc8c;
 }
 
 .answer__check {

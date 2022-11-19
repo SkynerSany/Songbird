@@ -20,10 +20,12 @@
 
   &:has(.answer__check_denied) {
     color: #ff0000;
+    box-shadow: 0 0 0 1px #ff0000;
   }
 
   &:has(.answer__check_accept) {
     color: #00bc8c;
+    box-shadow: 0 0 0 1px #00bc8c;
   }
 }
 

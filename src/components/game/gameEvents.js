@@ -32,7 +32,7 @@ function checkComlete() {
     document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Финишь' : 'Finish';
   }
 
-  if (game.curentLevel === game.data.length - 1) {
+  if (game.curentLevel === game.data.length - 1 && game.levelComplite) {
     document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Следующий уровень' : 'Next Level';
     return 'finish';
   }

@@ -481,7 +481,7 @@ function checkComlete() {
     document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Финишь' : 'Finish';
   }
 
-  if (_game__WEBPACK_IMPORTED_MODULE_0__.game.curentLevel === _game__WEBPACK_IMPORTED_MODULE_0__.game.data.length - 1) {
+  if (_game__WEBPACK_IMPORTED_MODULE_0__.game.curentLevel === _game__WEBPACK_IMPORTED_MODULE_0__.game.data.length - 1 && _game__WEBPACK_IMPORTED_MODULE_0__.game.levelComplite) {
     document.querySelector('.next-level').textContent = currentLang === 'ru' ? 'Следующий уровень' : 'Next Level';
     return 'finish';
   }
